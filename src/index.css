@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --wood-light: #f5f1eb;
+  --wood-medium: #e8ddd4;
+  --wood-dark: #d4c4b0;
+  --gold-subtle: #d4af37;
+  --silver-subtle: #c0c0c0;
+  --text-primary: #2c1810;
+  --text-secondary: #5d4e37;
+}
+
+body {
+  background: linear-gradient(135deg, var(--wood-light) 0%, var(--wood-medium) 100%);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+.wood-texture {
+  background-image: 
+    linear-gradient(90deg, rgba(212, 196, 176, 0.03) 50%, transparent 50%),
+    linear-gradient(rgba(212, 196, 176, 0.02) 50%, transparent 50%);
+  background-size: 20px 20px;
+}
+
+.elegant-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.gold-accent {
+  color: var(--gold-subtle);
+}
+
+.silver-accent {
+  color: var(--silver-subtle);
+}
+
+.luxury-shadow {
+  box-shadow: 0 8px 32px rgba(44, 24, 16, 0.08);
+}
+
+.luxury-border {
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.sticky-filters {
+  position: sticky;
+  top: 80px;
+  z-index: 40;
+  backdrop-filter: blur(10px);
+  background: rgba(245, 241, 235, 0.95);
+}
+
+.filter-active {
+  background: linear-gradient(135deg, var(--gold-subtle), #e6c547);
+  color: white;
+  font-weight: 500;
+}
+
+.carousel-container {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.timer-digit {
+  background: linear-gradient(135deg, var(--text-primary), var(--text-secondary));
+  color: white;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 2rem;
+  min-width: 80px;
+  text-align: center;
+}
+
+.bid-button {
+  background: linear-gradient(135deg, var(--gold-subtle), #e6c547);
+  color: white;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.bid-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(212, 175, 55, 0.3);
+}
+
+.status-offer {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-overvalued {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.camera-placeholder {
+  background: linear-gradient(135deg, var(--wood-medium), var(--wood-dark));
+  border: 2px dashed var(--gold-subtle);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  color: var(--text-secondary);
+}
+
+.step-indicator {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.step-active {
+  background: linear-gradient(135deg, var(--gold-subtle), #e6c547);
+  color: white;
+}
+
+.step-inactive {
+  background: var(--wood-medium);
+  color: var(--text-secondary);
+}
+
+.step-completed {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
